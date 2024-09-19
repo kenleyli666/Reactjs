@@ -1,4 +1,3 @@
-import SumValue, {sum} from './sum';
 import React, { useState } from 'react';
 
 export function User({ userDetail }) {
