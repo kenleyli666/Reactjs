@@ -1,0 +1,21 @@
+.item-icon {
+    height: 300px;
+    width: 90%;
+}
+
+.item-container {
+    max-width: 450px;
+}
+
+.item-price::before {
+    content: '$';
+    display: inline-block;
+}
+
+.item-description {
+    min-height: 140px;
+}
+
+.item-title {
+    max-height: 140px;
+}

@@ -1,79 +1,58 @@
 const Aboutone = {
-    icon: {
-      src: "https://placehold.co/600x400/EEE/31343C?text=One",
-      alt : "this is pic",
-      width : "200px",
-      height : "200px"
-    },
+    icon: "https://placehold.co/600x400/EEE/31343C?text=One",
     name: "peter",
     loginid: "1",
-    products: {
-      productName : "product 1",
-      role :"role 1",
-      status : "pending",
-      finalDate : "2023-3-3"}
+    products: [{
+      "productName" : "productName",
+      "role" :"role",
+      "status" : "status",
+      "finalDate" : "finalDate"}]
   };
   
   const Abouttwo = {
-    icon: {
-      src: "https://placehold.co/600x400/EEE/31343C?text=Two",
-      alt : "this is pic",
-      width : "200px",
-      height : "200px"
-    },
+    icon: "https://placehold.co/600x400/EEE/31343C?text=Two",
     name: "tom",
     loginid: "2",
-    products: {
-      productName : "product 2",
-      role :"role 2",
-      status : "completed",
-      finalDate : "2025-5-5"}
+    products: [{
+      "productName" : "productName",
+      "role" :"role",
+      "status" : "status",
+      "finalDate" : "finalDate"}]
   };
 
   const Aboutthree = {
-    icon: {
-      src: "https://placehold.co/600x400/EEE/31343C?text=Three",
-      alt : "this is pic",
-      width : "200px",
-      height : "200px"
-    },
+    icon: "https://placehold.co/600x400/EEE/31343C?text=Three",
     name: "mary",
     loginid: "3",
-    products: {
-      productName : "product 3",
-      role :"role 3",
-      status : "active",
-      finalDate : "2024-1-1"}
+    products: [{
+      "productName" : "productName",
+      "role" :"role",
+      "status" : "status",
+      "finalDate" : "finalDate"}]
   };
   
   const Aboutfour = {
-    icon: {
-      src: "https://placehold.co/600x400/EEE/31343C?text=Four",
-      alt : "this is pic",
-      width : "200px",
-      height : "200px"
-    },
+    icon: "https://placehold.co/600x400/EEE/31343C?text=Four",
     name: "billy",
     loginid: "4",
-    products: {
-      productName : "product 4",
-      role :"role 4",
-      status : "inactive",
-      finalDate : "2024-2-2"}
+    products: [{
+      "productName" : "productName",
+      "role" :"role",
+      "status" : "status",
+      "finalDate" : "finalDate"}]
   };
   
   const Info = [Aboutone, Abouttwo, Aboutthree, Aboutfour];
   
   export function Icon({ icon }) {
+    const userImage = {
+      src: icon.userImage,
+      name: icon.userName,
+    };
     return (
       <>
-      <div style={{display : 'inline-flex'}}>
-        <img 
-        src={icon.src} 
-        alt={icon.alt} 
-        width={icon.width} 
-        height={icon.height} />
-      </div>
+     <div>{icon} = {userImage.src}</div>
+     <div>{icon} = {userImage.name}</div>
       </>
     );
   }
@@ -81,9 +60,7 @@ const Aboutone = {
   export function Name({ name}) {
     return (
       <>
-      <div style={{display : 'inline-flex'}}>
       <div>{name}</div>
-      </div>
       </>
     );
   }
@@ -91,9 +68,7 @@ const Aboutone = {
   export function LoginId({ loginid  }) {
     return (
       <>
-        <div style={{display : 'inline-flex'}}>
         <div>{loginid}</div>
-        </div>
       </>
     );
   }
@@ -101,17 +76,17 @@ const Aboutone = {
   export function Products ({ products }) {
     return (
       <>
-      <div style={{display : 'inline-flex'} }>
-          <div>
-            <div>{`Products : ${products.productName}`}</div>
-            <div>{`Role : ${products.role}`}</div>
-          </div>
-          
-          <div>
-            <div>{`Status : ${products.status}`}</div>
-            <div>{`FinalDate : ${products.finalDate}`}</div>
-          </div>
+      
+      <div>
+        <div>{products.productName}</div>
+        <div>{products.role}</div>
       </div>
+      
+      <div>
+        <div>{products.status}</div>
+        <div>{products.finalDate}</div>
+      </div>
+
       </>
     );
   }
@@ -120,12 +95,14 @@ const Aboutone = {
     return (
       <>
         {Info.map((item, i) => (
-          <div key={i} style={{ display: 'flex', flexDirection: 'row', marginBottom: '10px' }}>
+          <div key={i}>
             <Icon icon={item.icon} />
-            <Name name={`Name: ${item.name}`} />
-            <br />
-            <LoginId loginid={`LoginId: ${item.loginid}`} />
-            <Products products={item.products} />
+            <Name name={item.name} />
+            <LoginId loginid={item.loginid} />
+            {/* <Products products={
+              item.products.productName
+              } 
+              /> */}
           </div>
         ))}
       </>
