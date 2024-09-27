@@ -1,0 +1,46 @@
+.item-icon {
+    height: 300px;
+    width: 90%;
+}
+
+.item-container {
+    max-width: 450px;
+}
+
+.item-price::before {
+    content: '$';
+    display: inline-block;
+}
+
+.item-description {
+    min-height: 140px;
+}
+
+.item-title {
+    max-height: 140px;
+}
+
+.container p{
+    color: #fff;
+    font-size: 3vmin;
+    font-weight: 800 ;
+    text-shadow: 1px 1px 1px black;
+}
+.radiofilter{
+    background: red;
+}
+.brandfilter{
+    background: orange;
+}
+.sizefilter{
+    background: rgba(255, 255, 0, 0.801);
+}
+.iconfilter{
+    background: green;
+}
+.accordion-actions{
+    background: blue;
+}
+.colorfilter{
+    background: purple;
+}

@@ -1,0 +1,63 @@
+[
+    {
+      "title": "Book One",
+      "author": "Author One",
+      "year": 2020,
+      "price": 29.99
+    },
+    {
+      "title": "Book Two",
+      "author": "Author Two",
+      "year": 2019,
+      "price": 19.99
+    },
+    {
+      "title": "Book Three",
+      "author": "Author Three",
+      "year": 2018,
+      "price": 24.99
+    },
+    {
+      "title": "Book Four",
+      "author": "Author Four",
+      "year": 2021,
+      "price": 34.99
+    },
+    {
+      "title": "Book Five",
+      "author": "Author Five",
+      "year": 2017,
+      "price": 14.99
+    },
+    {
+      "title": "Book Six",
+      "author": "Author Six",
+      "year": 2022,
+      "price": 39.99
+    },
+    {
+      "title": "Book Seven",
+      "author": "Author Seven",
+      "year": 2016,
+      "price": 9.99
+    },
+    {
+      "title": "Book Eight",
+      "author": "Author Eight",
+      "year": 2015,
+      "price": 12.99
+    },
+    {
+      "title": "Book Nine",
+      "author": "Author Nine",
+      "year": 2014,
+      "price": 22.99
+    },
+    {
+      "title": "Book Ten",
+      "author": "Author Ten",
+      "year": 2013,
+      "price": 18.99
+    }
+  ]
+  
